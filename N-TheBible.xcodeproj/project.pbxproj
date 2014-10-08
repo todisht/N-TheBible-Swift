@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD7805FA19E4C72000835AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7805F919E4C72000835AC3 /* AppDelegate.swift */; };
+		AD7805FC19E4C72000835AC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7805FB19E4C72000835AC3 /* ViewController.swift */; };
+		AD7805FF19E4C72000835AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7805FD19E4C72000835AC3 /* Main.storyboard */; };
+		AD78060119E4C72000835AC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD78060019E4C72000835AC3 /* Images.xcassets */; };
+		AD78060419E4C72000835AC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD78060219E4C72000835AC3 /* LaunchScreen.xib */; };
+		AD78061019E4C72000835AC3 /* N_TheBibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78060F19E4C72000835AC3 /* N_TheBibleTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD78060A19E4C72000835AC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD7805EC19E4C72000835AC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD7805F319E4C72000835AC3;
+			remoteInfo = "N-TheBible";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD7805F419E4C72000835AC3 /* N-TheBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "N-TheBible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7805F819E4C72000835AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7805F919E4C72000835AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD7805FB19E4C72000835AC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD7805FE19E4C72000835AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD78060019E4C72000835AC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AD78060319E4C72000835AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AD78060919E4C72000835AC3 /* N-TheBibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "N-TheBibleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD78060E19E4C72000835AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD78060F19E4C72000835AC3 /* N_TheBibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N_TheBibleTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD7805F119E4C72000835AC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD78060619E4C72000835AC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD7805EB19E4C72000835AC3 = {
+			isa = PBXGroup;
+			children = (
+				AD7805F619E4C72000835AC3 /* N-TheBible */,
+				AD78060C19E4C72000835AC3 /* N-TheBibleTests */,
+				AD7805F519E4C72000835AC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD7805F519E4C72000835AC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD7805F419E4C72000835AC3 /* N-TheBible.app */,
+				AD78060919E4C72000835AC3 /* N-TheBibleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD7805F619E4C72000835AC3 /* N-TheBible */ = {
+			isa = PBXGroup;
+			children = (
+				AD7805F919E4C72000835AC3 /* AppDelegate.swift */,
+				AD7805FB19E4C72000835AC3 /* ViewController.swift */,
+				AD7805FD19E4C72000835AC3 /* Main.storyboard */,
+				AD78060019E4C72000835AC3 /* Images.xcassets */,
+				AD78060219E4C72000835AC3 /* LaunchScreen.xib */,
+				AD7805F719E4C72000835AC3 /* Supporting Files */,
+			);
+			path = "N-TheBible";
+			sourceTree = "<group>";
+		};
+		AD7805F719E4C72000835AC3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD7805F819E4C72000835AC3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD78060C19E4C72000835AC3 /* N-TheBibleTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD78060F19E4C72000835AC3 /* N_TheBibleTests.swift */,
+				AD78060D19E4C72000835AC3 /* Supporting Files */,
+			);
+			path = "N-TheBibleTests";
+			sourceTree = "<group>";
+		};
+		AD78060D19E4C72000835AC3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD78060E19E4C72000835AC3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD7805F319E4C72000835AC3 /* N-TheBible */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD78061319E4C72000835AC3 /* Build configuration list for PBXNativeTarget "N-TheBible" */;
+			buildPhases = (
+				AD7805F019E4C72000835AC3 /* Sources */,
+				AD7805F119E4C72000835AC3 /* Frameworks */,
+				AD7805F219E4C72000835AC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "N-TheBible";
+			productName = "N-TheBible";
+			productReference = AD7805F419E4C72000835AC3 /* N-TheBible.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD78060819E4C72000835AC3 /* N-TheBibleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD78061619E4C72000835AC3 /* Build configuration list for PBXNativeTarget "N-TheBibleTests" */;
+			buildPhases = (
+				AD78060519E4C72000835AC3 /* Sources */,
+				AD78060619E4C72000835AC3 /* Frameworks */,
+				AD78060719E4C72000835AC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD78060B19E4C72000835AC3 /* PBXTargetDependency */,
+			);
+			name = "N-TheBibleTests";
+			productName = "N-TheBibleTests";
+			productReference = AD78060919E4C72000835AC3 /* N-TheBibleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD7805EC19E4C72000835AC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Tim Todish";
+				TargetAttributes = {
+					AD7805F319E4C72000835AC3 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					AD78060819E4C72000835AC3 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = AD7805F319E4C72000835AC3;
+					};
+				};
+			};
+			buildConfigurationList = AD7805EF19E4C72000835AC3 /* Build configuration list for PBXProject "N-TheBible" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD7805EB19E4C72000835AC3;
+			productRefGroup = AD7805F519E4C72000835AC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD7805F319E4C72000835AC3 /* N-TheBible */,
+				AD78060819E4C72000835AC3 /* N-TheBibleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD7805F219E4C72000835AC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7805FF19E4C72000835AC3 /* Main.storyboard in Resources */,
+				AD78060419E4C72000835AC3 /* LaunchScreen.xib in Resources */,
+				AD78060119E4C72000835AC3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD78060719E4C72000835AC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD7805F019E4C72000835AC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7805FC19E4C72000835AC3 /* ViewController.swift in Sources */,
+				AD7805FA19E4C72000835AC3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD78060519E4C72000835AC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD78061019E4C72000835AC3 /* N_TheBibleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD78060B19E4C72000835AC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD7805F319E4C72000835AC3 /* N-TheBible */;
+			targetProxy = AD78060A19E4C72000835AC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD7805FD19E4C72000835AC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD7805FE19E4C72000835AC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD78060219E4C72000835AC3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD78060319E4C72000835AC3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD78061119E4C72000835AC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		AD78061219E4C72000835AC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD78061419E4C72000835AC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "N-TheBible/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD78061519E4C72000835AC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "N-TheBible/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD78061719E4C72000835AC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "N-TheBibleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N-TheBible.app/N-TheBible";
+			};
+			name = Debug;
+		};
+		AD78061819E4C72000835AC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "N-TheBibleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N-TheBible.app/N-TheBible";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD7805EF19E4C72000835AC3 /* Build configuration list for PBXProject "N-TheBible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD78061119E4C72000835AC3 /* Debug */,
+				AD78061219E4C72000835AC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD78061319E4C72000835AC3 /* Build configuration list for PBXNativeTarget "N-TheBible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD78061419E4C72000835AC3 /* Debug */,
+				AD78061519E4C72000835AC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AD78061619E4C72000835AC3 /* Build configuration list for PBXNativeTarget "N-TheBibleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD78061719E4C72000835AC3 /* Debug */,
+				AD78061819E4C72000835AC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD7805EC19E4C72000835AC3 /* Project object */;
+}
