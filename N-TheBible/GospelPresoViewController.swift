@@ -162,28 +162,8 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             self.verseNumber++
             
         case 3:
-            var path = CGPathCreateMutable()
-            CGPathMoveToPoint(path, nil, 205, 852)
-            CGPathAddLineToPoint(path, nil, 205, 361)
-            
-            let progressLine2 = CAShapeLayer()
-            progressLine2.path = path
-            progressLine2.strokeColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine2.fillColor = UIColor.clearColor().CGColor
-            progressLine2.lineWidth = 14.0
-            progressLine2.lineCap = kCALineCapRound
-            
-            // add the curve to the screen
-            self.view.layer.addSublayer(progressLine2)
-            
-            // create a basic animation that animates the value 'strokeEnd'
-            let animateStrokeEnd2 = CABasicAnimation(keyPath: "strokeEnd")
-            animateStrokeEnd2.duration = 0.75
-            animateStrokeEnd2.fromValue = 0.0
-            animateStrokeEnd2.toValue = 1.0
-            
-            // add the animation
-            progressLine2.addAnimation(animateStrokeEnd2, forKey: "animate stroke end animation")
+            //draw first line.
+            drawLine(205, y1: 852, x2: 205, y2: 361)
             
             //Draw second dot.
             drawDot(CGRectMake(180, 311, 50, 50),dotDelay:0.75)
@@ -200,28 +180,8 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             self.verseNumber++
             
         case 4:
-            var path = CGPathCreateMutable()
-            CGPathMoveToPoint(path, nil, 215, 360)
-            CGPathAddLineToPoint(path, nil, 545, 860)
-
-            let progressLine2 = CAShapeLayer()
-            progressLine2.path = path
-            progressLine2.strokeColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine2.fillColor = UIColor.clearColor().CGColor
-            progressLine2.lineWidth = 14.0
-            progressLine2.lineCap = kCALineCapRound
-
-            // add the curve to the screen
-            self.view.layer.addSublayer(progressLine2)
-
-            // create a basic animation that animates the value 'strokeEnd'
-            let animateStrokeEnd2 = CABasicAnimation(keyPath: "strokeEnd")
-            animateStrokeEnd2.duration = 0.75
-            animateStrokeEnd2.fromValue = 0.0
-            animateStrokeEnd2.toValue = 1.0
-            
-            // add the animation
-            progressLine2.addAnimation(animateStrokeEnd2, forKey: "animate stroke end animation")
+            //draw second line.
+            drawLine(215, y1: 360, x2: 545, y2: 860)
             
             //draw third dot.
             drawDot(CGRectMake(534, 857, 50, 50), dotDelay: 0.75)
@@ -238,28 +198,8 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             self.verseNumber++
             
         case 5:
-            var path = CGPathCreateMutable()
-            CGPathMoveToPoint(path, nil, 559, 857)
-            CGPathAddLineToPoint(path, nil, 559, 361)
-            
-            let progressLine2 = CAShapeLayer()
-            progressLine2.path = path
-            progressLine2.strokeColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine2.fillColor = UIColor.clearColor().CGColor
-            progressLine2.lineWidth = 14.0
-            progressLine2.lineCap = kCALineCapRound
-            
-            // add the curve to the screen
-            self.view.layer.addSublayer(progressLine2)
-            
-            // create a basic animation that animates the value 'strokeEnd'
-            let animateStrokeEnd2 = CABasicAnimation(keyPath: "strokeEnd")
-            animateStrokeEnd2.duration = 0.75
-            animateStrokeEnd2.fromValue = 0.0
-            animateStrokeEnd2.toValue = 1.0
-            
-            // add the animation
-            progressLine2.addAnimation(animateStrokeEnd2, forKey: "animate stroke end animation")
+            //draw third line.
+            drawLine(559, y1: 857, x2: 559, y2: 361)
             
             //draw fourth dot.
             drawDot(CGRectMake(534, 311, 50, 50), dotDelay: 0.75)
@@ -318,6 +258,31 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         
         // add the curve to the screen
         self.view.layer.addSublayer(progressLine)
+    }
+    
+    func drawLine(x1:CGFloat,y1:CGFloat,x2:CGFloat,y2:CGFloat) {
+        var path = CGPathCreateMutable()
+        CGPathMoveToPoint(path, nil, x1, y1)
+        CGPathAddLineToPoint(path, nil, x2, y2)
+        
+        let progressLine2 = CAShapeLayer()
+        progressLine2.path = path
+        progressLine2.strokeColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
+        progressLine2.fillColor = UIColor.clearColor().CGColor
+        progressLine2.lineWidth = 14.0
+        progressLine2.lineCap = kCALineCapRound
+        
+        // add the curve to the screen
+        self.view.layer.addSublayer(progressLine2)
+        
+        // create a basic animation that animates the value 'strokeEnd'
+        let animateStrokeEnd2 = CABasicAnimation(keyPath: "strokeEnd")
+        animateStrokeEnd2.duration = 0.75
+        animateStrokeEnd2.fromValue = 0.0
+        animateStrokeEnd2.toValue = 1.0
+        
+        // add the animation
+        progressLine2.addAnimation(animateStrokeEnd2, forKey: "animate stroke end animation")
     }
     
 
