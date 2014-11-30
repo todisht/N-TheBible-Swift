@@ -147,42 +147,8 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             
             self.verseNumber++
         case 2:
-            // set up some values to use in the curve
-            let ovalStartAngle = CGFloat(90.01 * M_PI/180)
-            let ovalEndAngle = CGFloat(90 * M_PI/180)
-            let ovalRect = CGRectMake(180, 852, 50, 50)
-            
-            // create the bezier path
-            let ovalPath = UIBezierPath()
-            
-            ovalPath.addArcWithCenter(CGPointMake(CGRectGetMidX(ovalRect), CGRectGetMidY(ovalRect)),
-                radius: CGRectGetWidth(ovalRect) / 2,
-                startAngle: ovalStartAngle,
-                endAngle: ovalEndAngle, clockwise: true)
-            
-            // create an object that represents how the curve
-            // should be presented on the screen
-            let progressLine = CAShapeLayer()
-            progressLine.path = ovalPath.CGPath
-            progressLine.strokeColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine.fillColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine.lineWidth = 1.0
-            progressLine.lineCap = kCALineCapRound
-            
-            // add the curve to the screen
-            self.view.layer.addSublayer(progressLine)
-            
-            // create a basic animation that animates the value 'strokeEnd'
-            let animateStrokeEnd = CABasicAnimation(keyPath: "strokeEnd")
-            animateStrokeEnd.duration = 0
-            animateStrokeEnd.fromValue = 1.0
-            animateStrokeEnd.toValue = 1.0
-            
-            // add the animation
-            progressLine.addAnimation(animateStrokeEnd, forKey: "animate stroke end animation")
-            
-            
-            //TOOK IT FROM HERE
+            //draw first dot.
+            drawDot(CGRectMake(180, 852, 50, 50),dotDelay: 0.0)
             
             verseHolder.frame = CGRect(x: self.screenSize.width, y: 113, width: 360, height: 40)
             verseLabel.sizeToFit()
@@ -219,41 +185,8 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             // add the animation
             progressLine2.addAnimation(animateStrokeEnd2, forKey: "animate stroke end animation")
             
-            // set up some values to use in the curve
-//            let ovalStartAngle = CGFloat(90.01 * M_PI/180)
-//            let ovalEndAngle = CGFloat(90 * M_PI/180)
-//            let ovalRect = CGRectMake(180, 311, 50, 50)
-//            
-//            // create the bezier path
-//            let ovalPath = UIBezierPath()
-//            
-//            ovalPath.addArcWithCenter(CGPointMake(CGRectGetMidX(ovalRect), CGRectGetMidY(ovalRect)),
-//                radius: CGRectGetWidth(ovalRect) / 2,
-//                startAngle: ovalStartAngle,
-//                endAngle: ovalEndAngle, clockwise: true)
-//
-//            // create an object that represents how the curve
-//            // should be presented on the screen
-//            let progressLine = CAShapeLayer()
-//            progressLine.path = ovalPath.CGPath
-//            progressLine.strokeColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-//            progressLine.fillColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-//            progressLine.lineWidth = 1.0
-//            progressLine.lineCap = kCALineCapRound
-//            
-//            // add the curve to the screen
-//            self.view.layer.addSublayer(progressLine)
-//
-//            // create a basic animation that animates the value 'strokeEnd'
-//            let animateStrokeEnd = CABasicAnimation(keyPath: "strokeEnd")
-//            animateStrokeEnd.duration = 0.75
-//            animateStrokeEnd.fromValue = 0.0
-//            animateStrokeEnd.toValue = 1.0
-//            
-//            // add the animation
-//            progressLine.addAnimation(animateStrokeEnd, forKey: "animate stroke end animation")
-            
-            drawDot(CGRectMake(180, 311, 50, 50))
+            //Draw second dot.
+            drawDot(CGRectMake(180, 311, 50, 50),dotDelay:0.75)
             
             
             verseHolder.frame = CGRect(x: self.screenSize.width, y: 113, width: 360, height: 65)
@@ -290,42 +223,8 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             // add the animation
             progressLine2.addAnimation(animateStrokeEnd2, forKey: "animate stroke end animation")
             
-            // set up some values to use in the curve
-            let ovalStartAngle = CGFloat(90.01 * M_PI/180)
-            let ovalEndAngle = CGFloat(90 * M_PI/180)
-            let ovalRect = CGRectMake(534, 857, 50, 50)
-            
-            // create the bezier path
-            let ovalPath = UIBezierPath()
-            
-            ovalPath.addArcWithCenter(CGPointMake(CGRectGetMidX(ovalRect), CGRectGetMidY(ovalRect)),
-                radius: CGRectGetWidth(ovalRect) / 2,
-                startAngle: ovalStartAngle,
-                endAngle: ovalEndAngle, clockwise: true)
-            
-            // create an object that represents how the curve
-            // should be presented on the screen
-            let progressLine = CAShapeLayer()
-            progressLine.path = ovalPath.CGPath
-            progressLine.strokeColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine.fillColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine.lineWidth = 1.0
-            progressLine.lineCap = kCALineCapRound
-            
-            // add the curve to the screen
-            self.view.layer.addSublayer(progressLine)
-            
-            // create a basic animation that animates the value 'strokeEnd'
-            let animateStrokeEnd = CABasicAnimation(keyPath: "strokeEnd")
-            animateStrokeEnd.duration = 0.0
-            animateStrokeEnd.fromValue = 1.0
-            animateStrokeEnd.toValue = 1.0
-            
-            // add the animation
-            progressLine.addAnimation(animateStrokeEnd, forKey: "animate stroke end animation")
-            
-
-            //took from here
+            //draw third dot.
+            drawDot(CGRectMake(534, 857, 50, 50), dotDelay: 0.75)
             
             verseHolder.frame = CGRect(x: self.screenSize.width, y: 113, width: 360, height: 75)
             verseLabel.sizeToFit()
@@ -362,39 +261,8 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             // add the animation
             progressLine2.addAnimation(animateStrokeEnd2, forKey: "animate stroke end animation")
             
-            // set up some values to use in the curve
-            let ovalStartAngle = CGFloat(90.01 * M_PI/180)
-            let ovalEndAngle = CGFloat(90 * M_PI/180)
-            let ovalRect = CGRectMake(534, 311, 50, 50)
-            
-            // create the bezier path
-            let ovalPath = UIBezierPath()
-            
-            ovalPath.addArcWithCenter(CGPointMake(CGRectGetMidX(ovalRect), CGRectGetMidY(ovalRect)),
-                radius: CGRectGetWidth(ovalRect) / 2,
-                startAngle: ovalStartAngle,
-                endAngle: ovalEndAngle, clockwise: true)
-            
-            // create an object that represents how the curve
-            // should be presented on the screen
-            let progressLine = CAShapeLayer()
-            progressLine.path = ovalPath.CGPath
-            progressLine.strokeColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine.fillColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
-            progressLine.lineWidth = 1.0
-            progressLine.lineCap = kCALineCapRound
-            
-            // add the curve to the screen
-            self.view.layer.addSublayer(progressLine)
-            
-            // create a basic animation that animates the value 'strokeEnd'
-            let animateStrokeEnd = CABasicAnimation(keyPath: "strokeEnd")
-            animateStrokeEnd.duration = 0.75
-            animateStrokeEnd.fromValue = 0.0
-            animateStrokeEnd.toValue = 1.0
-            
-            // add the animation
-            progressLine.addAnimation(animateStrokeEnd, forKey: "animate stroke end animation")
+            //draw fourth dot.
+            drawDot(CGRectMake(534, 311, 50, 50), dotDelay: 0.75)
             
             verseHolder.frame = CGRect(x: self.screenSize.width, y: 113, width: 360, height: 75)
             verseLabel.sizeToFit()
@@ -427,7 +295,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         }
     }
     
-    func drawDot(dotRect:CGRect){
+    func drawDot(dotRect:CGRect,dotDelay:Double){
         let ovalStartAngle = CGFloat(90.01 * M_PI/180)
         let ovalEndAngle = CGFloat(90 * M_PI/180)
         let ovalRect = dotRect
@@ -446,7 +314,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         progressLine.fillColor = UIColor(red: 0.95, green: 0.54, blue: 0.2, alpha:1.0).CGColor
         progressLine.lineWidth = 1.0
         progressLine.lineCap = kCALineCapRound
-        progressLine.beginTime = CACurrentMediaTime() + 0.75
+        progressLine.beginTime = CACurrentMediaTime() + dotDelay
         
         // add the curve to the screen
         self.view.layer.addSublayer(progressLine)
