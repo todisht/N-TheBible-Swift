@@ -1,25 +1,208 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wiG-Zm-089">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="N_TheBible" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ydN-nB-gF6">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kna-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wq3-7V-DzA">
+                                <rect key="frame" x="16" y="53" width="323" height="204"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="N.png" translatesAutoresizingMaskIntoConstraints="NO" id="0tg-yA-pyL">
+                                <rect key="frame" x="34" y="254" width="700" height="750"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayCircle-iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="bBG-ES-6lb">
+                                <rect key="frame" x="171" y="877" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayCircle-iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZBe-tF-XjR">
+                                <rect key="frame" x="171" y="336" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayCircle-iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-9i-UcF">
+                                <rect key="frame" x="525" y="336" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayCircle-iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="TaL-9K-kKa">
+                                <rect key="frame" x="525" y="882" width="50" height="50"/>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWh-EF-yb1" customClass="DrawView" customModule="N_TheBible" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="38" width="768" height="1004"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b97-Vu-Z1T">
+                                        <rect key="frame" x="693" y="8" width="40" height="30"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NcT-T1-Wsp"/>
+                                        </connections>
+                                    </button>
+                                    <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2d-ie-rt4">
+                                        <rect key="frame" x="354" y="56" width="414" height="117"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3a-g7-yUo">
+                                                <rect key="frame" x="15" y="11" width="391" height="88"/>
+                                                <string key="text">Try it! Trace the outline in the order of the message you just read through, and see if you can remember how to tell other people what it says “N” the Bible about how to get to Heaven!</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.231372565" green="0.13333334029999999" blue="0.070588238540000001" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                </subviews>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="closeButton" destination="b97-Vu-Z1T" id="Hbe-VH-XBC"/>
+                        <outlet property="drawView" destination="PWh-EF-yb1" id="zzO-92-JSM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="136"/>
+        </scene>
+        <!--Intro Modal View Controller-->
+        <scene sceneID="QL9-QN-4qC">
+            <objects>
+                <viewController storyboardIdentifier="introModal" modalPresentationStyle="currentContext" id="mLY-xC-L58" customClass="IntroModalViewController" customModule="N_TheBible" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jpj-xM-jZy"/>
+                        <viewControllerLayoutGuide type="bottom" id="eG5-Jd-cfe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A7H-wu-iYS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3cz-7Q-gdE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-8X-crN">
+                                <rect key="frame" x="584" y="10" width="40" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closePressed:" destination="mLY-xC-L58" eventType="touchUpInside" id="QaY-nV-udc"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kPv-0I-zZH">
+                                <rect key="frame" x="76" y="68" width="498" height="118"/>
+                                <string key="text">Do you know what it says “N” the Bible about how to get to Heaven? Would you be able to share the good news with others? Become familiar with the gospel message with this memory tool!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wn-5w-Ave">
+                                <rect key="frame" x="76" y="237" width="498" height="276"/>
+                                <state key="normal" image="rangerJamesVideo.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playVideo:" destination="mLY-xC-L58" eventType="touchUpInside" id="fIh-cU-qYU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="650" height="700"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="btnClose" destination="Cdf-8X-crN" id="bni-sI-BB0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPE-CA-hUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694" y="1045"/>
+        </scene>
+        <!--Gospel Preso View Controller-->
+        <scene sceneID="Wx5-99-FbQ">
+            <objects>
+                <viewController id="wiG-Zm-089" customClass="GospelPresoViewController" customModule="N_TheBible" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VOH-cX-n9e"/>
+                        <viewControllerLayoutGuide type="bottom" id="hqu-vG-UsJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="laD-ve-zQo">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aXU-TI-VnO">
+                                <rect key="frame" x="0.0" y="1" width="768" height="1024"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="N.png" translatesAutoresizingMaskIntoConstraints="NO" id="nHT-hd-nl0">
+                                <rect key="frame" x="43" y="229" width="700" height="750"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayCircle-iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="TeS-ai-quR">
+                                <rect key="frame" x="180" y="852" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayCircle-iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hkw-XN-AZO">
+                                <rect key="frame" x="180" y="311" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayCircle-iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="0oH-rm-Cak">
+                                <rect key="frame" x="534" y="311" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayCircle-iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-aR-L0E">
+                                <rect key="frame" x="534" y="857" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLG-ih-aYG">
+                                <rect key="frame" x="0.0" y="874" width="150" height="150"/>
+                                <state key="normal" image="tryItButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="i7k-t6-SgG"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.74999999999999978" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHI-Gy-fac">
+                                <rect key="frame" x="356" y="37" width="412" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The following is what it says “N” (in) the Bible about how to get to Heaven:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2k-iv-z0N">
+                                        <rect key="frame" x="17" y="12" width="379" height="43"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.231372565" green="0.13333334029999999" blue="0.070588238540000001" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kna-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5cw-Ur-L0X">
+                                <rect key="frame" x="16" y="28" width="323" height="204"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKX-yH-SeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694" y="136"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="N.png" width="640" height="650"/>
+        <image name="bg.jpg" width="1536" height="2048"/>
+        <image name="grayCircle-iPad.png" width="80" height="80"/>
+        <image name="kna-logo.png" width="1598" height="1152"/>
+        <image name="rangerJamesVideo.jpg" width="638" height="354"/>
+        <image name="tryItButton.png" width="155" height="155"/>
+    </resources>
+    <color key="tintColor" red="0.23137256503105164" green="0.13333334028720856" blue="0.070588238537311554" alpha="1" colorSpace="deviceRGB"/>
 </document>

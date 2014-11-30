@@ -10,16 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var drawView: DrawView!
+    @IBOutlet weak var closeButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func closePressed(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-
-
+    
+    //shake to clear screen
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+        if(event.subtype == UIEventSubtype.MotionShake) {
+            drawView.lines = []
+            drawView.setNeedsDisplay()
+        }
+    }
 }
 

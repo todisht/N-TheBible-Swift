@@ -13,6 +13,21 @@
 		AD78060119E4C72000835AC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD78060019E4C72000835AC3 /* Images.xcassets */; };
 		AD78060419E4C72000835AC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD78060219E4C72000835AC3 /* LaunchScreen.xib */; };
 		AD78061019E4C72000835AC3 /* N_TheBibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78060F19E4C72000835AC3 /* N_TheBibleTests.swift */; };
+		AD78061A19E4CCD800835AC3 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78061919E4CCD800835AC3 /* Line.swift */; };
+		AD78061C19E4CCE600835AC3 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78061B19E4CCE600835AC3 /* DrawView.swift */; };
+		AD78062419E4CD9800835AC3 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD78061E19E4CD9800835AC3 /* bg.jpg */; };
+		AD78062519E4CD9800835AC3 /* grayCircle-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = AD78061F19E4CD9800835AC3 /* grayCircle-iPad.png */; };
+		AD78062619E4CD9800835AC3 /* grayCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = AD78062019E4CD9800835AC3 /* grayCircle.png */; };
+		AD78062719E4CD9800835AC3 /* N.png in Resources */ = {isa = PBXBuildFile; fileRef = AD78062119E4CD9800835AC3 /* N.png */; };
+		AD78062819E4CD9800835AC3 /* redCircle-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = AD78062219E4CD9800835AC3 /* redCircle-iPad.png */; };
+		AD78062919E4CD9800835AC3 /* redCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = AD78062319E4CD9800835AC3 /* redCircle.png */; };
+		AD78062B19E4CDFB00835AC3 /* kna-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AD78062A19E4CDFB00835AC3 /* kna-logo.png */; };
+		AD831E9919F0BA5700A0C160 /* rangerJamesVideo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD831E9819F0BA5700A0C160 /* rangerJamesVideo.jpg */; };
+		AD831E9C19F0CA1B00A0C160 /* james.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AD831E9B19F0CA1B00A0C160 /* james.mp4 */; };
+		AD9E644F19FDCA7700DCC7F1 /* GospelPresoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E644E19FDCA7700DCC7F1 /* GospelPresoViewController.swift */; };
+		AD9E645319FDD6DD00DCC7F1 /* tryItButton.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9E645219FDD6DD00DCC7F1 /* tryItButton.png */; };
+		ADD9BB9819E615CF0077474E /* launch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD9BB9719E615CF0077474E /* launch@2x.png */; };
+		ADD9BB9A19E6213D0077474E /* IntroModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9BB9919E6213D0077474E /* IntroModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +51,21 @@
 		AD78060919E4C72000835AC3 /* N-TheBibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "N-TheBibleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD78060E19E4C72000835AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD78060F19E4C72000835AC3 /* N_TheBibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N_TheBibleTests.swift; sourceTree = "<group>"; };
+		AD78061919E4CCD800835AC3 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		AD78061B19E4CCE600835AC3 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		AD78061E19E4CD9800835AC3 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg.jpg; path = images/bg.jpg; sourceTree = SOURCE_ROOT; };
+		AD78061F19E4CD9800835AC3 /* grayCircle-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grayCircle-iPad.png"; path = "images/grayCircle-iPad.png"; sourceTree = SOURCE_ROOT; };
+		AD78062019E4CD9800835AC3 /* grayCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grayCircle.png; path = images/grayCircle.png; sourceTree = SOURCE_ROOT; };
+		AD78062119E4CD9800835AC3 /* N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = N.png; path = images/N.png; sourceTree = SOURCE_ROOT; };
+		AD78062219E4CD9800835AC3 /* redCircle-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redCircle-iPad.png"; path = "images/redCircle-iPad.png"; sourceTree = SOURCE_ROOT; };
+		AD78062319E4CD9800835AC3 /* redCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redCircle.png; path = images/redCircle.png; sourceTree = SOURCE_ROOT; };
+		AD78062A19E4CDFB00835AC3 /* kna-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "kna-logo.png"; path = "../../../personal/kna-logo.png"; sourceTree = "<group>"; };
+		AD831E9819F0BA5700A0C160 /* rangerJamesVideo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rangerJamesVideo.jpg; path = images/rangerJamesVideo.jpg; sourceTree = SOURCE_ROOT; };
+		AD831E9B19F0CA1B00A0C160 /* james.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = james.mp4; sourceTree = "<group>"; };
+		AD9E644E19FDCA7700DCC7F1 /* GospelPresoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GospelPresoViewController.swift; sourceTree = "<group>"; };
+		AD9E645219FDD6DD00DCC7F1 /* tryItButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tryItButton.png; sourceTree = "<group>"; };
+		ADD9BB9719E615CF0077474E /* launch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch@2x.png"; path = "../../N-TheBible-Obj-C/icons/launch@2x.png"; sourceTree = "<group>"; };
+		ADD9BB9919E6213D0077474E /* IntroModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroModalViewController.swift; path = ../IntroModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +107,18 @@
 		AD7805F619E4C72000835AC3 /* N-TheBible */ = {
 			isa = PBXGroup;
 			children = (
+				AD831E9B19F0CA1B00A0C160 /* james.mp4 */,
+				ADD9BB9919E6213D0077474E /* IntroModalViewController.swift */,
+				AD78061D19E4CD8700835AC3 /* Images */,
+				AD78061B19E4CCE600835AC3 /* DrawView.swift */,
+				AD78061919E4CCD800835AC3 /* Line.swift */,
 				AD7805F919E4C72000835AC3 /* AppDelegate.swift */,
 				AD7805FB19E4C72000835AC3 /* ViewController.swift */,
 				AD7805FD19E4C72000835AC3 /* Main.storyboard */,
 				AD78060019E4C72000835AC3 /* Images.xcassets */,
 				AD78060219E4C72000835AC3 /* LaunchScreen.xib */,
 				AD7805F719E4C72000835AC3 /* Supporting Files */,
+				AD9E644E19FDCA7700DCC7F1 /* GospelPresoViewController.swift */,
 			);
 			path = "N-TheBible";
 			sourceTree = "<group>";
@@ -110,6 +146,23 @@
 				AD78060E19E4C72000835AC3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD78061D19E4CD8700835AC3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AD9E645219FDD6DD00DCC7F1 /* tryItButton.png */,
+				AD831E9819F0BA5700A0C160 /* rangerJamesVideo.jpg */,
+				AD78062A19E4CDFB00835AC3 /* kna-logo.png */,
+				ADD9BB9719E615CF0077474E /* launch@2x.png */,
+				AD78061E19E4CD9800835AC3 /* bg.jpg */,
+				AD78061F19E4CD9800835AC3 /* grayCircle-iPad.png */,
+				AD78062019E4CD9800835AC3 /* grayCircle.png */,
+				AD78062119E4CD9800835AC3 /* N.png */,
+				AD78062219E4CD9800835AC3 /* redCircle-iPad.png */,
+				AD78062319E4CD9800835AC3 /* redCircle.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +214,7 @@
 				TargetAttributes = {
 					AD7805F319E4C72000835AC3 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = CRP3N7Y8F5;
 					};
 					AD78060819E4C72000835AC3 = {
 						CreatedOnToolsVersion = 6.0;
@@ -192,9 +246,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD78062619E4CD9800835AC3 /* grayCircle.png in Resources */,
 				AD7805FF19E4C72000835AC3 /* Main.storyboard in Resources */,
+				AD78062719E4CD9800835AC3 /* N.png in Resources */,
 				AD78060419E4C72000835AC3 /* LaunchScreen.xib in Resources */,
+				ADD9BB9819E615CF0077474E /* launch@2x.png in Resources */,
+				AD831E9919F0BA5700A0C160 /* rangerJamesVideo.jpg in Resources */,
+				AD78062419E4CD9800835AC3 /* bg.jpg in Resources */,
+				AD78062819E4CD9800835AC3 /* redCircle-iPad.png in Resources */,
+				AD78062919E4CD9800835AC3 /* redCircle.png in Resources */,
+				AD78062B19E4CDFB00835AC3 /* kna-logo.png in Resources */,
+				AD9E645319FDD6DD00DCC7F1 /* tryItButton.png in Resources */,
 				AD78060119E4C72000835AC3 /* Images.xcassets in Resources */,
+				AD78062519E4CD9800835AC3 /* grayCircle-iPad.png in Resources */,
+				AD831E9C19F0CA1B00A0C160 /* james.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD78061A19E4CCD800835AC3 /* Line.swift in Sources */,
+				ADD9BB9A19E6213D0077474E /* IntroModalViewController.swift in Sources */,
+				AD9E644F19FDCA7700DCC7F1 /* GospelPresoViewController.swift in Sources */,
 				AD7805FC19E4C72000835AC3 /* ViewController.swift in Sources */,
+				AD78061C19E4CCE600835AC3 /* DrawView.swift in Sources */,
 				AD7805FA19E4C72000835AC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +407,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "N-TheBible/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2aa957b1-b0f4-4da1-bac7-b6f438affd49";
 			};
 			name = Debug;
 		};
@@ -348,9 +420,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "N-TheBible/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "127bcf0f-4f8b-4959-b6a3-f4a02e153d36";
 			};
 			name = Release;
 		};
@@ -407,6 +482,7 @@
 				AD78061519E4C72000835AC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD78061619E4C72000835AC3 /* Build configuration list for PBXNativeTarget "N-TheBibleTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +491,7 @@
 				AD78061819E4C72000835AC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
