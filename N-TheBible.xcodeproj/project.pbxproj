@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD6EF1591A2BE63400C7F512 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD6EF1581A2BE63400C7F512 /* data.plist */; };
 		AD7805FA19E4C72000835AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7805F919E4C72000835AC3 /* AppDelegate.swift */; };
 		AD7805FC19E4C72000835AC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7805FB19E4C72000835AC3 /* ViewController.swift */; };
 		AD7805FF19E4C72000835AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7805FD19E4C72000835AC3 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD6EF1581A2BE63400C7F512 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		AD7805F419E4C72000835AC3 /* N-TheBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "N-TheBible.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7805F819E4C72000835AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7805F919E4C72000835AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				AD78060219E4C72000835AC3 /* LaunchScreen.xib */,
 				AD7805F719E4C72000835AC3 /* Supporting Files */,
 				AD9E644E19FDCA7700DCC7F1 /* GospelPresoViewController.swift */,
+				AD6EF1581A2BE63400C7F512 /* data.plist */,
 			);
 			path = "N-TheBible";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				AD78062619E4CD9800835AC3 /* grayCircle.png in Resources */,
 				AD7805FF19E4C72000835AC3 /* Main.storyboard in Resources */,
 				AD78062719E4CD9800835AC3 /* N.png in Resources */,
+				AD6EF1591A2BE63400C7F512 /* data.plist in Resources */,
 				AD78060419E4C72000835AC3 /* LaunchScreen.xib in Resources */,
 				ADD9BB9819E615CF0077474E /* launch@2x.png in Resources */,
 				AD831E9919F0BA5700A0C160 /* rangerJamesVideo.jpg in Resources */,

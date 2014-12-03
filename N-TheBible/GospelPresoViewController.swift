@@ -17,12 +17,15 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
     let verseLabel:UILabel = UILabel(frame: CGRect(x: 20, y: 20, width: 335, height: CGFloat.max))
     let verseHolder:UIView = UIView()
     let btnContinue:UIButton =  UIButton.buttonWithType(UIButtonType.System) as UIButton
-    
+    let currentVersion: AnyObject? = NSBundle.mainBundle().infoDictionary["CFBundleShortVersionString"]
+
     var verseNumber: Int = 0
+    var drawingLayers: [CAShapeLayer] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        println("version number: \(self.currentVersion!)")
         
         verseHolder.backgroundColor = UIColor(red: 0.85, green: 0.24, blue: 0.18, alpha: 0.75)
         
@@ -49,7 +52,32 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        showIntroModal()
+        var myDict: NSMutableDictionary?
+        var path2: String = "";
+        
+        if let path = NSBundle.mainBundle().pathForResource("data", ofType: "plist") {
+            myDict = NSMutableDictionary(contentsOfFile: path)
+            path2 = path
+        }
+        var isFirstView:Bool!
+        
+        if let dict = myDict {
+            // Use your dict here
+            isFirstView = dict.valueForKey("isFirstView") as? Bool
+            
+            if(isFirstView!){
+                showIntroModal()
+                //println("initial value: \(isFirstView!)")
+                dict.setValue(false, forKey: "isFirstView")
+                isFirstView = dict.valueForKey("isFirstView") as? Bool
+                //println("new value: \(isFirstView!)")
+                dict.writeToFile(path2, atomically: false)
+            } else {
+                drawStep()
+            }
+        } else {
+            println("plist is no worky")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,8 +95,14 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
     }
     
     func btnContinueHandler(sender:UIButton!) {
-        println("verse number: \(self.verseNumber)")
-        drawStep()
+//        println("verse number: \(self.verseNumber)")
+        if(self.verseNumber != 7) {
+            drawStep()
+        } else {
+            self.verseNumber = 0;
+            self.btnContinue.setTitle("Continue >", forState: UIControlState.Normal)
+            resetStage()
+        }
     }
     
     //MARK: - Delegate methods
@@ -77,7 +111,16 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         drawStep()
     }
     
-
+    func resetStage() {
+        UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.verseHolder.frame = CGRect(x: self.screenSize.width, y: 113, width: self.verseHolder.frame.width, height: self.verseHolder.frame.height)
+            }, completion:nil)
+        
+        for obj:CAShapeLayer in self.drawingLayers {
+            obj.removeFromSuperlayer();
+        }
+        drawStep()
+    }
     
     func drawStep() {
        
@@ -125,6 +168,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             progressLine.lineCap = kCALineCapRound
             
             // add the curve to the screen
+            self.drawingLayers.append(progressLine)
             self.view.layer.insertSublayer(progressLine, atIndex: 2)
             
             // create a basic animation that animates the value 'strokeEnd'
@@ -141,9 +185,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             
             UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.verseHolder.frame = CGRect(x: self.screenSize.width-self.verseHolder.frame.width, y: 113, width: self.verseHolder.frame.width, height: self.verseHolder.frame.height)
-                }) { (Bool) -> Void in
-                    println("step zero done.")
-                }
+            }, completion: nil)
             
             self.verseNumber++
         case 2:
@@ -155,9 +197,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             
             UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.verseHolder.frame = CGRect(x: self.screenSize.width-self.verseHolder.frame.width, y: 113, width: self.verseHolder.frame.width, height: self.verseHolder.frame.height)
-                }) { (Bool) -> Void in
-                    println("step zero done.")
-            }
+            }, completion:nil)
             
             self.verseNumber++
             
@@ -173,9 +213,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             verseLabel.sizeToFit()
             UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.verseHolder.frame = CGRect(x: self.screenSize.width-self.verseHolder.frame.width, y: 113, width: self.verseHolder.frame.width, height: self.verseHolder.frame.height)
-                }) { (Bool) -> Void in
-                    println("step zero done.")
-            }
+            },completion:nil)
             
             self.verseNumber++
             
@@ -191,9 +229,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             
             UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.verseHolder.frame = CGRect(x: self.screenSize.width-self.verseHolder.frame.width, y: 113, width: self.verseHolder.frame.width, height: self.verseHolder.frame.height)
-                }) { (Bool) -> Void in
-                    println("step zero done.")
-            }
+            }, completion:nil)
             
             self.verseNumber++
             
@@ -209,25 +245,60 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             
             UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.verseHolder.frame = CGRect(x: self.screenSize.width-self.verseHolder.frame.width, y: 113, width: self.verseHolder.frame.width, height: self.verseHolder.frame.height)
-                }) { (Bool) -> Void in
-                    println("step zero done.")
-            }
+            }, completion:nil)
             
             self.verseNumber++
             
         case 6 :
+            // set up some values to use in the curve
+            let ovalStartAngle = CGFloat(90.01 * M_PI/180)
+            let ovalEndAngle = CGFloat(90 * M_PI/180)
+            let ovalRect = CGRectMake(61, 273, 661, 661)
+            
+            // create the bezier path
+            let ovalPath = UIBezierPath()
+            
+            ovalPath.addArcWithCenter(CGPointMake(CGRectGetMidX(ovalRect), CGRectGetMidY(ovalRect)),
+                radius: CGRectGetWidth(ovalRect) / 2,
+                startAngle: ovalStartAngle,
+                endAngle: ovalEndAngle, clockwise: true)
+            
+            // create an object that represents how the curve
+            // should be presented on the screen
+            let progressLine = CAShapeLayer()
+            progressLine.path = ovalPath.CGPath
+            progressLine.strokeColor = UIColor(red: 0.86, green: 0.48, blue: 0.16, alpha:1.0).CGColor
+            progressLine.fillColor = UIColor.clearColor().CGColor
+            progressLine.lineWidth = 18.0
+            progressLine.lineCap = kCALineCapRound
+            
+            // add the curve to the screen
+            self.drawingLayers.append(progressLine)
+            self.view.layer.insertSublayer(progressLine, atIndex: 2)
+            
+            // create a basic animation that animates the value 'strokeEnd'
+            let animateStrokeEnd = CABasicAnimation(keyPath: "strokeEnd")
+            animateStrokeEnd.duration = 1.0
+            animateStrokeEnd.fromValue = 0.0
+            animateStrokeEnd.toValue = 1.0
+            
+            // add the animation
+            progressLine.addAnimation(animateStrokeEnd, forKey: "animate stroke end animation")
+            
             verseHolder.frame = CGRect(x: self.screenSize.width, y: 113, width: 360, height: 75)
             verseLabel.sizeToFit()
             
             UIView.animateWithDuration(0.4, delay: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.verseHolder.frame = CGRect(x: self.screenSize.width-self.verseHolder.frame.width, y: 113, width: self.verseHolder.frame.width, height: self.verseHolder.frame.height)
                 }) { (Bool) -> Void in
-                    println("step zero done.")
-                    
                     UIView.animateWithDuration(0.4, delay: 0.4, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                         self.btnContinue.frame = CGRect(x: self.screenSize.width, y: self.screenSize.height-70, width: self.btnContinue.frame.width, height: self.btnContinue.frame.height)
                         }) { (Bool) -> Void in
-                            println("complete")
+                            self.verseNumber++;
+                            self.btnContinue.setTitle("Start Over", forState: UIControlState.Normal)
+                            UIView.animateWithDuration(0.4, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                                self.btnContinue.frame = CGRect(x: self.screenSize.width-self.btnContinue.frame.width, y: self.screenSize.height-70, width: self.btnContinue.frame.width, height: self.btnContinue.frame.height)
+                            },completion:nil)
                     }
             }
         default :
@@ -257,6 +328,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         progressLine.beginTime = CACurrentMediaTime() + dotDelay
         
         // add the curve to the screen
+        self.drawingLayers.append(progressLine)
         self.view.layer.addSublayer(progressLine)
     }
     
@@ -273,6 +345,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         progressLine2.lineCap = kCALineCapRound
         
         // add the curve to the screen
+        self.drawingLayers.append(progressLine2)
         self.view.layer.addSublayer(progressLine2)
         
         // create a basic animation that animates the value 'strokeEnd'
