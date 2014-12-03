@@ -18,7 +18,7 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
     let verseHolder:UIView = UIView()
     let btnContinue:UIButton =  UIButton.buttonWithType(UIButtonType.System) as UIButton
     let currentVersion: AnyObject? = NSBundle.mainBundle().infoDictionary["CFBundleShortVersionString"]
-
+    
     var verseNumber: Int = 0
     var drawingLayers: [CAShapeLayer] = []
 
@@ -103,6 +103,10 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             self.btnContinue.setTitle("Continue >", forState: UIControlState.Normal)
             resetStage()
         }
+    }
+    
+    @IBAction func watchIntroHandler(sender: AnyObject) {
+        showIntroModal()
     }
     
     //MARK: - Delegate methods
