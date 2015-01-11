@@ -65,8 +65,6 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         data = dict
         
         isFirstView = data?.valueForKey("isFirstView") as Bool
-        println("first view \(isFirstView)")
-
     }
     
     
@@ -74,7 +72,9 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         super.viewDidAppear(animated)
         
         if(isFirstView!){
-            showIntroModal()
+            if(!drawViewDidAppear){
+                showIntroModal()
+            }
             
             data?.setValue(false, forKey: "isFirstView")
             let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
@@ -84,7 +84,6 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
             data?.writeToFile(path, atomically: true)
         } else {
             isFirstView = false;
-            println("draw modal did display (view did appear) \(drawViewDidAppear)")
             if(!drawViewDidAppear){
                 drawStep()
             }
