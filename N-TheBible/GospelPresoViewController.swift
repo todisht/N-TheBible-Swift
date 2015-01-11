@@ -17,15 +17,16 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
     let verseLabel:UILabel = UILabel(frame: CGRect(x: 20, y: 20, width: 335, height: CGFloat.max))
     let verseHolder:UIView = UIView()
     let btnContinue:UIButton =  UIButton.buttonWithType(UIButtonType.System) as UIButton
-    let currentVersion: AnyObject? = NSBundle.mainBundle().infoDictionary["CFBundleShortVersionString"]
+    let currentVersion: AnyObject = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as String
     
     var verseNumber: Int = 0
     var drawingLayers: [CAShapeLayer] = []
+    var drawViewDidAppear = false
+    var isFirstView:Bool!
+    var data:NSMutableDictionary?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        println("version number: \(self.currentVersion!)")
         
         verseHolder.backgroundColor = UIColor(red: 0.85, green: 0.24, blue: 0.18, alpha: 0.75)
         
@@ -45,6 +46,26 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         self.btnContinue.addTarget(self, action: "btnContinueHandler:", forControlEvents: UIControlEvents.TouchUpInside)
         self.btnContinue.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         self.view.addSubview(self.btnContinue)
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0)as NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("data.plist")
+        
+        let fileManager = NSFileManager.defaultManager()
+        
+        // Check if file exists
+        if(!fileManager.fileExistsAtPath(path))
+        {
+            // If it doesn't, copy it from the default file in the Resources folder
+            let bundle = NSBundle.mainBundle().pathForResource("data", ofType: "plist")
+            fileManager.copyItemAtPath(bundle!, toPath: path, error:nil)
+        }
+        
+        var dict:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path)!
+        data = dict
+        
+        isFirstView = data?.valueForKey("isFirstView") as Bool
+        println("first view \(isFirstView)")
 
     }
     
@@ -52,31 +73,21 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        var myDict: NSMutableDictionary?
-        var path2: String = "";
-        
-        if let path = NSBundle.mainBundle().pathForResource("data", ofType: "plist") {
-            myDict = NSMutableDictionary(contentsOfFile: path)
-            path2 = path
-        }
-        var isFirstView:Bool!
-        
-        if let dict = myDict {
-            // Use your dict here
-            isFirstView = dict.valueForKey("isFirstView") as? Bool
+        if(isFirstView!){
+            showIntroModal()
             
-            if(isFirstView!){
-                showIntroModal()
-                //println("initial value: \(isFirstView!)")
-                dict.setValue(false, forKey: "isFirstView")
-                isFirstView = dict.valueForKey("isFirstView") as? Bool
-                //println("new value: \(isFirstView!)")
-                dict.writeToFile(path2, atomically: false)
-            } else {
+            data?.setValue(false, forKey: "isFirstView")
+            let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+            let documentsDirectory = paths.objectAtIndex(0) as NSString
+            let path = documentsDirectory.stringByAppendingPathComponent("data.plist")
+            
+            data?.writeToFile(path, atomically: true)
+        } else {
+            isFirstView = false;
+            println("draw modal did display (view did appear) \(drawViewDidAppear)")
+            if(!drawViewDidAppear){
                 drawStep()
             }
-        } else {
-            println("plist is no worky")
         }
     }
 
@@ -85,17 +96,21 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "segDrawView") {
+            self.drawViewDidAppear = true
+        }
+    }
+    
     func showIntroModal() {
-        //if (!introModalDidDisplay) {
         let intro = self.storyboard?.instantiateViewControllerWithIdentifier("introModal") as IntroModalViewController
         intro.delegate = self
         intro.modalPresentationStyle = UIModalPresentationStyle.FormSheet
         self.presentViewController(intro, animated: true, completion: nil)
-        //}
     }
     
     func btnContinueHandler(sender:UIButton!) {
-//        println("verse number: \(self.verseNumber)")
+        //println("verse number: \(self.verseNumber)")
         if(self.verseNumber != 7) {
             drawStep()
         } else {
@@ -361,16 +376,5 @@ class GospelPresoViewController: UIViewController,IntroModalDelegate {
         // add the animation
         progressLine2.addAnimation(animateStrokeEnd2, forKey: "animate stroke end animation")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
